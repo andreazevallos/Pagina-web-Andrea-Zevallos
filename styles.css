@@ -1,0 +1,507 @@
+:root {
+  --primary-color: #bf7081;           /*header y footer*/
+  --secondary-color: #0a9396;         
+  --accent-color: #94d2bd;          
+  --text-color: #023047;              
+  --light-text: white;              /*botones superiores*/
+  --background: white;                /**
+  --titleprincipal: #8B5E5A;        /*nombre*/
+  --item-bg: #fff2e8;               /*fondo de las tarjetas*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #924a3d;
+  padding: 1.2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+nav.navbar {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  background: linear-gradient(to bottom right, #f2e8e4, #fdf8f5);
+  color: var(--light-text);
+  text-align: center;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #0a9396;
+  letter-spacing: 1px;
+}
+
+.hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+.hero-divider .line {
+  flex: 1;
+  height: 1px;
+  background-color: #dcb3b7;
+}
+
+.hero-divider i {
+  color: #c9949a;
+  font-size: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #924a3d;
+  font-weight: 400;
+}
+
+main {
+  display: block;
+}
+
+.content-section {
+  padding: 3rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  color: #924a3d;
+  font-weight: 500;
+}
+
+.title-divider {
+  margin: 0.4rem 0 0.8rem 0;
+  color: #c9949a;
+  font-size: 1.1rem;
+}
+
+.section-title .subtitle {
+  color: #a8727a;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.section-title p {
+  color: #924a3d;
+  font-size: 1rem;
+}
+
+/* --- ESTILOS DEL ACORDEÓN INTERACTIVO --- */
+.interactive-accordion {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  min-height: 340px;
+  margin-top: 1.5rem;
+}
+
+.accordion-item {
+  background: var(--item-bg);
+  flex: 1;
+  border-radius: 8px;
+  padding: 1.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* --- CONTENEDORES DE BIOGRAFÍA ESTILO IMAGEN DE REFERENCIA --- */
+.bio-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Caja principal de texto de Biografía */
+.bio-main-card {
+  background: rgba(255, 242, 232, 0.4);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(146, 74, 61, 0.03);
+  text-align: center;
+}
+
+.bio-main-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+}
+
+.bio-main-card p:last-child {
+  margin-bottom: 0;
+}
+
+.bio-main-card a {
+  color: #924a3d;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(146, 74, 61, 0.3);
+  transition: border-color 0.3s;
+}
+
+.bio-main-card a:hover {
+  border-color: #924a3d;
+}
+
+/* Fila horizontal de las 3 tarjetas inferiores */
+.bio-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(146, 74, 61, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border: 1px solid rgba(242, 232, 228, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Contenedor circular del icono */
+.feature-icon-wrapper {
+  background-color: #fcf4f0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.feature-icon-wrapper i {
+  color: #a8727a;
+  font-size: 1.4rem;
+}
+
+/* Textos dentro de los cuadros */
+.feature-text h3 {
+  color: #924a3d;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.feature-text p {
+  color: #666;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+/* Cuando un elemento está activo se expande proporcionalmente ocupando el espacio principal */
+.accordion-item.active {
+  flex: 5;
+  cursor: default;
+}
+
+/* Encabezado fijo de cada tarjeta */
+.accordion-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.accordion-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.accordion-title {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Si el elemento está encogido (no activo), modificamos la orientación del título */
+.accordion-item:not(.active) .accordion-header {
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.accordion-item:not(.active) .accordion-title {
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Contenido interno con transición de opacidad y visibilidad */
+.accordion-content {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+  opacity: 1;
+  visibility: visible;
+  max-height: 1000px;
+  margin-top: 0.5rem;
+}
+
+.accordion-content h3 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f2e8e4;
+  padding-bottom: 0.3rem;
+}
+
+.accordion-content ul {
+  padding-left: 1.2rem;
+}
+
+.accordion-content li {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.collaborators {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.collaborator-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.3rem 0;
+  display: inline-block;
+}
+
+.collaborator-link:hover {
+  text-decoration: underline;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.contact-info a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav.navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Cambiamos el acordeón a vertical en móviles */
+  .interactive-accordion {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .accordion-item {
+    flex: none;
+    width: 100%;
+    min-height: 80px;
+  }
+  
+  .accordion-item.active {
+    flex: none;
+  }
+  
+  .accordion-item:not(.active) .accordion-header {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .accordion-item:not(.active) .accordion-title {
+    writing-mode: horizontal-tb;
+    margin-top: 0;
+  }
+  
+  .accordion-emoji {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* --- ESTILOS DE LA SECCIÓN CONTACTO CON ICONOS --- */
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem; /* Espacio de separación entre cada red social */
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Permite que se acomoden si la pantalla es muy chica */
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 150px;
+}
+
+.social-link {
+  color: #924a3d; /* Mismo color de los títulos h2 */
+  font-size: 3rem; /* Tamaño del logo */
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+/* Efecto visual opcional cuando pasas el mouse por encima del logo */
+.social-link:hover {
+  transform: scale(1.1);
+  color: var(--primary-color); /* Cambia ligeramente al color primario */
+}
+
+.social-text {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-top: 0.3rem;
+}
+
+/* --- EFECTO DE SUBRAYADO DINÁMICO EN EL MENÚ --- */
+nav.navbar a {
+  position: relative;
+  padding: 0.4rem 0;
+  transition: color 0.3s ease;
+}
+
+/* Línea base oculta bajo cada enlace */
+nav.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--light-text); /* Línea blanca como en el diseño */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Cuando el enlace está activo o se pasa el mouse, la línea se expande uniformemente */
+nav.navbar a.active::after,
+nav.navbar a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
