@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #bf7081;           /*header y footer*/
+  --primary-color: #bf7081;           
   --secondary-color: #0a9396;         
   --accent-color: #94d2bd;          
   --text-color: #023047;              
-  --light-text: white;              /*botones superiores*/
-  --background: white;                /**
-  --titleprincipal: #8B5E5A;        /*nombre*/
-  --item-bg: #fff2e8;               /*fondo de las tarjetas*/
+  --light-text: white;              
+  --background: white;                
+  --titleprincipal: #8B5E5A;        
+  --item-bg: #fff2e8;               
 }
 
 * {
@@ -142,7 +142,7 @@ main {
   font-size: 1rem;
 }
 
-/* --- ESTILOS DEL ACORDEÓN INTERACTIVO --- */
+
 .interactive-accordion {
   display: flex;
   gap: 1rem;
@@ -165,7 +165,7 @@ main {
   position: relative;
 }
 
-/* --- CONTENEDORES DE BIOGRAFÍA ESTILO IMAGEN DE REFERENCIA --- */
+
 .bio-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -174,7 +174,7 @@ main {
   gap: 2rem;
 }
 
-/* Caja principal de texto de Biografía */
+
 .bio-main-card {
   background: rgba(255, 242, 232, 0.4);
   padding: 2rem 2.5rem;
@@ -206,7 +206,7 @@ main {
   border-color: #924a3d;
 }
 
-/* Fila horizontal de las 3 tarjetas inferiores */
+
 .bio-features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -229,7 +229,7 @@ main {
   transform: translateY(-3px);
 }
 
-/* Contenedor circular del icono */
+
 .feature-icon-wrapper {
   background-color: #fcf4f0;
   width: 60px;
@@ -246,7 +246,7 @@ main {
   font-size: 1.4rem;
 }
 
-/* Textos dentro de los cuadros */
+
 .feature-text h3 {
   color: #924a3d;
   font-size: 1.1rem;
@@ -260,13 +260,13 @@ main {
   line-height: 1.4;
 }
 
-/* Cuando un elemento está activo se expande proporcionalmente ocupando el espacio principal */
+
 .accordion-item.active {
   flex: 5;
   cursor: default;
 }
 
-/* Encabezado fijo de cada tarjeta */
+
 .accordion-header {
   display: flex;
   flex-direction: column;
@@ -290,7 +290,7 @@ main {
   white-space: nowrap;
 }
 
-/* Si el elemento está encogido (no activo), modificamos la orientación del título */
+
 .accordion-item:not(.active) .accordion-header {
   margin-bottom: 0;
   height: 100%;
@@ -304,7 +304,7 @@ main {
   margin-top: 1rem;
 }
 
-/* Contenido interno con transición de opacidad y visibilidad */
+
 .accordion-content {
   opacity: 0;
   visibility: hidden;
@@ -379,7 +379,7 @@ footer a {
   text-decoration: none;
 }
 
-/* Responsividad para móviles */
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -396,7 +396,7 @@ footer a {
     font-size: 2rem;
   }
 
-  /* Cambiamos el acordeón a vertical en móviles */
+  
   .interactive-accordion {
     flex-direction: column;
     min-height: auto;
@@ -439,14 +439,14 @@ footer a {
   }
 }
 
-/* --- ESTILOS DE LA SECCIÓN CONTACTO CON ICONOS --- */
+
 .social-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 3rem; /* Espacio de separación entre cada red social */
+  gap: 3rem; 
   margin-top: 2rem;
-  flex-wrap: wrap; /* Permite que se acomoden si la pantalla es muy chica */
+  flex-wrap: wrap; 
 }
 
 .social-item {
@@ -458,17 +458,17 @@ footer a {
 }
 
 .social-link {
-  color: #924a3d; /* Mismo color de los títulos h2 */
-  font-size: 3rem; /* Tamaño del logo */
+  color: #924a3d; 
+  font-size: 3rem; 
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
   margin-bottom: 0.5rem;
 }
 
-/* Efecto visual opcional cuando pasas el mouse por encima del logo */
+
 .social-link:hover {
   transform: scale(1.1);
-  color: var(--primary-color); /* Cambia ligeramente al color primario */
+  color: var(--primary-color); 
 }
 
 .social-text {
@@ -478,14 +478,14 @@ footer a {
   margin-top: 0.3rem;
 }
 
-/* --- EFECTO DE SUBRAYADO DINÁMICO EN EL MENÚ --- */
+
 nav.navbar a {
   position: relative;
   padding: 0.4rem 0;
   transition: color 0.3s ease;
 }
 
-/* Línea base oculta bajo cada enlace */
+
 nav.navbar a::after {
   content: '';
   position: absolute;
@@ -493,13 +493,13 @@ nav.navbar a::after {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--light-text); /* Línea blanca como en el diseño */
+  background-color: var(--light-text); 
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Cuando el enlace está activo o se pasa el mouse, la línea se expande uniformemente */
+
 nav.navbar a.active::after,
 nav.navbar a:hover::after {
   transform: scaleX(1);
